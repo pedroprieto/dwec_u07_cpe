@@ -1,0 +1,17 @@
+name: Desplegar en Azure
+on: [push]
+jobs:
+  build_vue:
+    runs-on: ubuntu-latest
+    name: Desplegar en Azure
+    steps:
+    - uses: actions/checkout@v2
+    - name: Dependencias
+      run: npm install
+    - name: Compilar
+      run: npm run build
+    - uses: tibor19/static-website-deploy@v1
+      with:
+        enabled-static-website: 'true'
+        folder: './dist'
+        connection-string: ${{ secrets.CONNECTION_STRING_AZURE }}
