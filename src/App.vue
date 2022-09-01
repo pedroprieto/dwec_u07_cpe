@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <h1 class="text-center mb-2">Buscar usuario de GitHub</h1>
+        <h1 class="text-center mb-2">Buscar usuario de GitHub V2! Ahora todav</h1>
         <div class="container">
             <GitHub></GitHub>
         </div>
